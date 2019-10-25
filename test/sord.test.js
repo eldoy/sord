@@ -24,10 +24,11 @@ describe('sord', () => {
     expect(document.querySelectorAll('li')[1].innerHTML).toBe('Bye')
   })
 
-  // it('should get the first one and loop the rest with root', async () => {
-  //   document.body.innerHTML = '<div id="app"><ul><li>Hello</li><li>Hello</li></ul></div>'
-  //   var root = s('#app')
-  //   s(root, 'li', el => el.textContent = 'Bye')
-  //   s('li', el => expect(el.innerHTML).toBe('Hello'))
-  // })
+  it('should get the first one and loop the rest with root', async () => {
+    document.body.innerHTML = '<div id="app"><ul><li>Hello</li><li>Hello</li></ul></div>'
+    var root = s('#app')
+    s(root, 'li', el => el.textContent = 'Bye')
+    expect(document.querySelectorAll('li')[0].innerHTML).toBe('Bye')
+    expect(document.querySelectorAll('li')[1].innerHTML).toBe('Bye')
+  })
 })
