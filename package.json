@@ -1,6 +1,6 @@
 {
   "name": "sord",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Microscopic replacement for `document.querySelector` and `document.querySelectorAll`.",
   "main": "index.js",
   "directories": {
